@@ -1,0 +1,61 @@
+<html>
+<head>
+<title>(Type a title for your page here)</title>
+<script type="text/javascript">
+
+function dateRandom()
+{
+var json=[
+  {
+    "Author":"vaibav",
+    "title":"chu chu",
+    "Datep":"10-02-1994"
+  },
+  {
+    "Author":"jaibav",
+    "title":"tu chu",
+
+    "Datep":"10-02-1996"
+  },
+  {
+    "Author":"taibav",
+    "title":"tu tu",
+    "Datep":"10-02-1999"
+  }
+];
+
+
+
+
+var p=Math.floor(Math.random() * json.length);  //random value
+document.getElementById("demo").innerHTML=json[p]["Author"]+": "+json[p]["title"]+": "+json[p]["Datep"];
+
+}
+function dater(){
+var datev=new Date();
+var day=datev.getDay();
+var hours=datev.getHours();
+var min=datev.getMinutes();
+var sec=datev.getSeconds();
+
+document.getElementById("ct").innerHTML=hours+":"+min+":"+sec;
+setTimeout(dater,500);
+
+if(sec%5==0){
+dateRandom();
+}
+}
+
+
+
+
+
+</script>
+</head>
+
+<body onload="dater()">
+<p id='ct' ></p>
+<p id="demo"></p>
+
+</body>
+</html>
