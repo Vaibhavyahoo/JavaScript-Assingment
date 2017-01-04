@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+    function myFunction()
+    {
+      var links,i,linkArray,myDocument,pos,pos1;
+      linkArray = [];
+      myDocument = "you can go www.google.com for searhcing anything on web.or"+
+      "www.facebook.com is social website.www.gmail.com is mailing server www.redifmail.com" +
+      "if you want to do online shopping then use www.amazon.com";
+
+    pos = 0;
+    pos1 = 0;
+    for (var i = 0; i < myDocument.length; i++) {
+
+
+    pos = myDocument.indexOf("www",pos); // it will return index number of wwww at start with (w)
+    pos1 = myDocument.indexOf(".com",pos1); //it will return index number of .com at start with (.)
+
+    linkArray[i] = myDocument.substring(pos,pos1+4);// it will return string between (www-.com)
+    if(pos1 == myDocument.lastIndexOf(".com")) //it will return last index of .com in this case  start of (.com)
+    break ;
+    pos += 3; //shift position of i to 3 places because increment (www)
+    pos1 += 4; //shift positon of cursor by 4 places for increment (.com)
+  }
+  document.getElementById('link1').innerHTML = "Number of links are :: <b>" + linkArray.length+ "<b>" ;//number of link
+  links = "";
+  for (var i = 0; i < linkArray.length; i++) {
+    links += "<br>" + linkArray[i];
+    document.getElementById('link2').innerHTML = "links are following :: <br>" +links,i + "</b>";//name of link
+  }
+}
+    </script>
+
+
+  <h2>link Document </h2>
+  <a href = "http://www.gmail.com">gmail here</a><br>
+  <a href= "http://www.hotmail.com">hotmail here</a><br>
+  <a href= "http://google.com">google here</a><br>
+  <a href = "http://www.amazon.com">Amazon</a><br>
+  <a href = "http://www.facebook.com">Facebook</a><br>
+  <button onclick="myFunction()">checklink</button>  
+  <div id="link1">?</div>
+  <div id="link2">?</div>
+</body>
+</html>

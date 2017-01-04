@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+  function addRow(){
+    var table = document.getElementById('tbl'); //html table
+    var rowCount = table.rows.length;  //row length
+    var coloumnCount = table.rows[0].cells.length; //coloumn length
+    var row1 = table.insertRow(rowCount); //insert row
+  //  var cell1 = row.insertCell(0);
+  for (var i = 0; i < coloumnCount; i++) {
+    var col1 = row1.insertCell(i);
+    col1.innerHTML = "newcol" + i ;
+    }
+
+  }
+  function addColoumn()
+  {
+    var tbHeadObj = doc.getElementById('tbl').+head ;
+    for (var h = 0; h< tbHeadObj;h++)
+    {
+      var newTH = document.createElement('th');
+
+  tblHeadObj.rows[h].appendChild(newTH); //append ne th to table
+
+  newTH.innerHTML = 'Column '+ (tblHeadObj.rows[h].cells.length); //append th content to th
+    }
+  }
+
+    </script>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+<input type="button" name="name" value="Addrow" onclick="addRow()">
+<input type="button" name="name" value="AddColoumn" onclick=" addColoumn()">
+    <table id = "tbl border="2">
+      <tr>
+        <td>firstcell</td>
+        <td>secondcell</td>
+      </tr>
+      <tr>
+        <td>thirdcell</td>
+        <td>fourthcell</td>
+      </tr>
+    </table>
+        <!-- <button onclick="  function add()">click</button> -->
+  </body>
+</html>
+//http://tapas4web.blogspot.in/2011/05/javascript-addremove-rowscolumns-in.html

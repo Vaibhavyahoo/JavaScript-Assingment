@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+    function myFunction() {
+    var x = document.forms["frm1"];
+    var text = "  ";
+    var i;
+    for (i = 0; i < x.length ;i++) {
+        text += x.elements[i].value + " ";
+    }
+    alert("Bridge Labs " +text);
+
+    </script>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <body >
+<!-- <fieldset id="bd"> -->
+
+    <form id="frm1">
+      <p id="test"></p>
+  Enter text :<input type="text" name="fname" value="" placeholder="Enter data">
+  <button onclick="myFunction()">submit</button>
+</form>
+
+  </body>
+</html>

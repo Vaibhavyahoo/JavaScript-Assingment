@@ -2,18 +2,28 @@
 <html>
   <head>
     <script>
+    function nextDay()
+    {
+      var days = ['Sunday','Monday','Tuesday','Wensday','Thursday','Friday','Satrday'];
+      var cDay = new Date();
+      var cd = days[cDay.getDay()];
+      document.getElementById('today').innerHTML = cd ;
+      d = cDay.getDate();
+      m = cDay.getMonth();
+      y = cDay.getFullYear();
 
-    function currentDay() {
-    var d=new Date();
-   days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
-    var cDay=days[d.getDay()];
-    document.getElementById('current').innerHTML="currentDay" +cDay ;
+      for (var i=0;i < 2;i++){
+        var Tomoro = new Date(y,m,d+i);
+      }
+      document.getElementById('Tommorrow').innerHTML = Tomoro ;
+    }
     </script>
+
     <meta charset="utf-8">
     <title></title>
   </head>
-  <body>
-    <h1 id="current">Current date</h1>
-    <h2 id="Next">Next Date</h2>
+  <body onload="nextDay()">
+  Current Date:  <p id = "today"></p>
+Next Date :  <p id = "Tommorrow"></p>
   </body>
 </html>

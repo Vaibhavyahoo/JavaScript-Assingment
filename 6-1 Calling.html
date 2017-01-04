@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+  /*  function sum(x) {
+      return function(y){
+        return x + y ;
+      }
+    }
+    var addTen = sum (10);
+    // addTen(20);
+      console.log(addTen(55));*/
+      function sumFour(w){
+        return function(x){
+          return function(y){
+            return function(z){
+              return w + x + y + z;
+            }
+          }
+        }
+      }
+    //  sumFour(1)(2)(10)(20) ;
+      //console.log(sumFour(1)(2)(10)(20));
+      var addTen = sumFour((3)(3)(4));
+      console.log(addTen(20));
+    </script>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+
+function calculator () {
+  var value ;
+  var calculation = {
+     first:function(value1){
+      this.value1 = value ;
+      return this;
+    },
+    second:function (value2){
+      this.value2 = value ;
+      return this ;
+    },
+     sum:function (){
+      var add = this.value1 + this.value2 ;
+      alert ("sum ="+add);
+    }
+  };
+  var value1 = prompt("enter first value");
+  var value2 = prompt("enter second value");
+  calculation.first(Number(value1)).second(Number(value2)).sum();
+}
+  </script>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+
+<button type="button" name="button" class="click" onclick="calculator()">click</button>
+
+</fieldset>
+  </body>
+</html>
+Contact GitHub API Training Shop Blog About
+
+    <!-- <button type="button" name="button" onclick="calculate()">click</button> -->
+
+  </body>
+</html>
